@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:JSONParsingApp"
+             x:Class="JSONParsingApp.MainPage">
+
+    <StackLayout x:Name="SLMain">
+        <!-- Place new controls here -->
+        
+        <Label x:Name="LBLAppName" Text="Whens the 405?" BackgroundColor="#00875D" TextColor="White"
+               HorizontalTextAlignment="Center" FontSize="Large" >
+            
+        </Label>
+
+        <Image x:Name="ImageLogo" Source="bus_eireann.png" Margin="5"></Image>
+
+        <Grid x:Name="GrdInfo" Margin="5">
+            <!--Making the headers of the Columns-->
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        
+        <Label x:Name="LBLtext" Text="" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+        <Button x:Name="BtnUpdate" Clicked="BtnUpdate_Clicked" Text="Get Info" FontSize="Large"
+                BorderRadius="5" BorderWidth="5" BorderColor="#00875D" BackgroundColor="White" TextColor="#00875D">
+            
+        </Button>
+
+        <Picker x:Name="picker"
+        BackgroundColor="#00875D" TextColor="White" SelectedIndex="0">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>St James - OPP BayView</x:String>
+                    <x:String>Rahoon Rd - OPP Droim Chaoin</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+    </StackLayout>
+
+</ContentPage>

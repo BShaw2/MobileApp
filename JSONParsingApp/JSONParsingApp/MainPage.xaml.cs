@@ -24,7 +24,6 @@ namespace JSONParsingApp
             picker.SelectedIndex = 0;
             SetupGridHeaders();
             GetPassageInfo();
-            //LBLtext.Text = "" + CurrentTime;
 
         }
 
